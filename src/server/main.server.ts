@@ -1,3 +1,10 @@
-import { makeHello } from "shared/module";
+import { ReplicatedStorage, Players } from "@rbxts/services"
+import { createClientRemoteEvents } from "@rbxts/remoteevent";
+import makeFolderManager from "@rbxts/extendable-resources";
+import { ClientToServerHandler } from "shared/module";
 
-print(makeHello("main.server.ts"));
+
+
+ClientToServerHandler.OnServerEvent.Connect( (player: Player) => {
+    print("Fired by" + player)
+})

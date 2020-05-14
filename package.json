@@ -11,5 +11,14 @@
   "license": "ISC",
   "devDependencies": {
     "@rbxts/types": "^1.0.356"
+  },
+  "dependencies": {
+    "@rbxts/extendable-resources": "^1.0.0",
+    "@rbxts/make": "^1.0.1",
+    "@rbxts/net": "^1.2.8",
+    "@rbxts/remoteevent": "^1.0.2",
+    "@rbxts/roact": "^1.2.0",
+    "@rbxts/services": "^1.0.4",
+    "@rbxts/t": "^1.2.9"
   }
 }
