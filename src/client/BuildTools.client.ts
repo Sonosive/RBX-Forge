@@ -1,5 +1,5 @@
 import { Players } from "@rbxts/services"
-import { DisplayMainInterface } from "./BToolModules/toolInterface"
+import { DisplayMainInterface, HideMainInterface } from "./ConfigToolModules/toolInterface"
 import t from "@rbxts/t"
 
 const BuildTools:Tool = new Instance("Tool")
@@ -13,6 +13,10 @@ BuildTools.Equipped.Connect( () => {
     //Players.LocalPlayer.FindFirstChildOfClass("PlayerGui")
     print("Equipped")
     DisplayMainInterface(<PlayerGui>Players.LocalPlayer.FindFirstChildOfClass("PlayerGui"))
+})
+
+BuildTools.Unequipped.Connect( () => {
+    HideMainInterface()
 })
 
 
